@@ -1,0 +1,711 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+a{
+  text-decoration: none !important;
+}
+li{
+  list-style: none;
+}
+
+.media-nav{
+  display: none;
+}
+
+/* Navbar component */
+.navbar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  height: 40px;
+  color: #000;
+/* background: #d6d5d5; */
+}
+
+.navbar .nav-link ul{
+  display: flex;
+  align-items: center;
+  margin-top: 2px;
+  margin-right: 10px;
+}
+.navbar .nav-link ul li{
+  margin-right: 10px;
+}
+.navbar .nav-link ul li a{
+  font-size: 18px;
+  color: rgb(202, 198, 198);
+}
+
+/* hero component */
+.hero-cont{
+  background: linear-gradient(0deg, rgba(4, 63, 4, 0.842), rgba(6, 13, 83, 0.781)), url('./assets/hero.jpg') no-repeat center center / cover;
+  height: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.hero-cont .hero{
+  margin-left: 40px;
+  width: 400px;
+  height: 210px;
+  color: #fff;
+  font-weight: 100;
+  font-size: 17px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+}
+.hero-cont .hero div button{
+  padding: 13px 30px;
+  border-radius: 5px;
+  border: none;
+  font-weight: 100;
+}
+.hero-cont .hero div .log-btn{
+  margin-left: 12px;
+  border: 3px solid rgba(4, 63, 4, 0.842);
+  background: transparent;
+  color: white;
+}
+.hero-cont .hero div button span svg{
+  height: 20px;
+  margin-bottom: -5px;
+  margin-left: 10px;
+}
+
+/* about component */
+.about{
+  display: flex;
+  width: 100%;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.about .img img{
+  width: 450px;
+  height: 400px;
+  border: 10px solid rgba(4, 63, 4, 0.842);
+  border-radius: 5px;
+}
+.top{
+  font-size: 15px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: rgb(17, 61, 110);
+  font-weight: 500;
+}
+.about h1{
+  font-size: 37px;
+}
+.about p{
+  font-weight: 100;
+  font-size: 17px;
+  line-height: 25px;
+}
+.about .context{
+  width: 450px;
+  margin-left: 50px;
+  height: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+}
+.about .join{
+  padding: 13px 20px;
+  border-radius: 5px;
+  border: none;
+  font-weight: 100;
+  margin-top: 10px;
+  box-shadow: 0 0 3px #000;
+}
+
+.about .join .icon{
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M16 12L10 18V6L16 12Z'%3E%3C/path%3E%3C/svg%3E");
+  background-position: center;
+  background-size: 25px;
+}
+
+/* services component */
+.service{
+  width: 100%;
+  display: grid;
+  place-items: center;
+  margin-top: 100px;
+}
+.service h1{
+  font-size: 37px;
+  font-weight: bolder;
+  margin: 5px 0 15px  0;
+}
+.service .card-cont{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 20px;
+  place-items: center;
+}
+.service .card-cont .card{
+  border: 2px solid #00579a;
+  width: 330px;
+  height: 300px;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 0 4px 1px #cac7c7;
+  transition: .3s all ease;
+}
+.service .card-cont .card img{
+  width: 70px;
+  margin-top: 20px;
+}
+.service .card-cont .card h3{
+  font-weight: 900;
+  margin-top: -50px;
+}
+.service .card-cont .card p{
+  font-weight: 100;
+  margin-top: -90px;
+}
+
+/* pricing component */
+.price{
+  display: grid;
+  place-items: center;
+  width: 100%;
+  margin-top: 70px;
+}
+.price h1{
+  font-size: 37px;
+}
+.price .price-cont{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  column-gap: 30px;
+  margin-top: 30px;
+}
+.price .price-cont .price-card{
+  width: 200px;
+  height: 500px;
+  overflow: scroll;
+  box-shadow: 0 0 3px 0 #000;
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.price .price-cont .price-card::-webkit-scrollbar,
+.price .price-cont .price-card ul::-webkit-scrollbar{
+  display: none;
+}
+.price .price-cont .price-card div{
+  height: 20%;
+  display: grid;
+  place-items: center;
+}
+.price .price-cont .price-card ul{
+  height: 400px;
+  overflow: scroll;
+}
+.price .price-cont .price-card li{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #757373;
+  margin-top: 10px;
+  padding-bottom: 7px;
+}
+.price .price-cont .price-card button{
+  margin-top: 15px;
+  border: none;
+  background: linear-gradient(to left, #2aa730, #188a31);
+  padding: 10px;
+  width: 70%;
+  align-self: center;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: 100;
+}
+/* footer component */
+.choice{
+  display: flex;
+  width: 100%;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+.choice img{
+  width: 450px;
+  height: 300px;
+  border: 10px solid rgba(4, 63, 4, 0.842);
+  border-radius: 5px;
+  margin-left: 50px;
+}
+.choice .context{
+  width: 450px;
+  font-weight: 100;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.choice .context h1{
+  font-size: 30px;
+  margin-top: -10px;
+}
+
+.choice .reason{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+}
+.choice .reason div{
+  padding: 10px;
+  box-shadow: 0 0 2px 2px #d6d5d5;
+  font-size: 14px;
+  border-radius: 4px;
+}
+.choice .reason div span svg{
+  height: 15px;
+  margin-bottom: -3px;
+  width: 15px;
+  margin-right: 5px;
+}
+
+.experience{
+  margin-top: 70px;
+  width: 100%;
+  height: 500px;
+  display: grid;
+  place-items: center;
+  background: #2aa730;
+  color: #fff;
+}
+.experience h1{
+  font-size: 42px;
+  font-weight: bolder;
+  margin-bottom: 20px;
+}
+
+.experience .context{
+  display: flex;
+  justify-content: space-between;
+  width: 600px;
+  font-size: 24px;
+  font-weight: bolder;
+}
+.experience .context div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+}
+.experience .context div .field{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.testimonial{
+  display: grid;
+  place-items: center;
+  margin-top: 60px;
+}
+.slider {
+  color: #fff;
+  height: 310px;
+  width: 1000px; 
+}
+.slider .card{
+  background-color: #fff;
+  height: 300px;
+}
+.slider .card div{
+  padding: 10px;
+  color: #000;
+  height: 100%;
+  background-color: grey;
+  border: 1px solid #000;
+  width: 90%;
+  align-self: center;
+}
+.testimonial h1{
+  font-size: 42px;
+  font-weight: bolder;
+  margin-bottom: 20px;
+}
+.blog{
+  margin-top: 70PX;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.blog .card{
+  width: 300px;
+  height: 400px;
+  box-shadow: 0 0 10px 5px #d6d5d5;
+}
+.blog img{
+  width: 100%;
+}
+.blog .card .context{
+ margin-top: 5px;
+ padding: 10px;
+}
+.blog .card .context h3{
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+.blog .card .context p{
+  font-weight: 100;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.blog .card .context button{
+  border: none;
+  padding: 8px 10px;
+  font-weight: 500;
+  background: #000;
+  color: #fff;
+  transition: .3s ease;
+}
+
+.recruit{
+  width: 100%;
+  height: 400px;
+  display: grid;
+  place-items: center;
+  background: #2aa730;
+}
+.recruit div{
+  width: 70%;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: #fff;
+}
+.recruit div h4{
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.recruit div p{
+  font-weight: 100;
+  margin-bottom: 10px;
+}
+.recruit div button{
+  color: blue;
+  padding: 5px 7px;
+  border: none;
+}
+
+.partner{
+  width: 100%;
+  display: grid;
+  place-items: center;
+  margin-top: 70px;
+}
+.partner .card-cont{
+  width: 70%;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  /* justify-content: center; */
+  gap: 40px;
+  margin-top: 30px;
+}
+.partner .card-cont .card{
+  width: 80px;
+  padding:20px 60px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 5px #eeebeb;
+}
+.partner .card-cont .card img{
+  width: 100%;
+}
+.partner h1{
+  font-size: 42px;
+  font-weight: bolder;
+  margin-bottom: 20px;
+}
+
+/* footer component */
+footer{
+  width: 100%;
+  display: grid;
+  place-items: center;
+  background-color: #333333;
+  color: #fff;
+  margin-top: 70px;
+  padding: 30px 0;
+}
+footer .inner{
+  width: 90%;
+  display: flex;
+}
+footer .inner div{
+  width: 33%;
+  padding: 10px;
+  font-weight: 100;
+}
+footer .inner div h3{
+  margin-bottom: 10px;
+}
+footer .inner div ul li{
+  margin-left: 17px;
+  margin-top: 7px;
+  list-style: disc;
+}
+footer .inner div:nth-child(2){
+  margin-left: 50px;
+}
+footer .inner div:nth-child(4) ul li{
+  list-style: none;
+  margin-left: -10px;
+  margin-top: 15px;
+}
+
+footer .inner div span svg{
+  height: 20px;
+  margin-bottom: -5px;
+  margin-right: 5px;
+}
+
+/* responsiveness */
+@media screen and (max-width: 900px) {
+  .navbar .nav-link{
+    display: none;
+  }
+  .navbar .media-nav{
+    display: block;
+    height: 40px;
+    width: 40px;
+    margin-right: 25px;
+  }
+  /* mobile hero component */
+  .hero-cont{
+    justify-content: center;
+  }
+  .hero-cont .hero{
+    text-align: center;
+    align-items: center;
+    font-weight: 100;
+  }
+
+  /* mobile about component */
+  .about{
+    display: grid;
+    height: 700px;
+  }
+  .about .img{
+    display: block;
+    margin: auto;
+  }
+  .about .context{
+    width: 80%;
+    margin-top: 20px;
+  }
+
+  /* media services component */
+  .service{
+    margin-top: 100px;
+  }
+  .service .card-cont{
+    grid-template-columns: auto auto;
+  }
+
+  /* media pricing component */
+  .price .price-cont{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 30px 20px;
+  }
+
+  /* media choice component */
+  .choice{
+    flex-direction: column;
+    height: 600px;
+    margin-top: 20px;
+  }
+  .choice .context{
+    width: 90%;
+    margin-top: 20px;
+  }
+
+  /* media testimonial component */
+  .testimonial .slider{
+    width: 700px;
+  }
+
+  /* media blog component */
+  .blog {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 40px;
+    height: 900px;
+  }
+  .blog .card:nth-child(3){
+    margin-top: -40px;
+  }
+
+  /* media partners component */
+  .partner .card-cont{
+    margin-left: -80px;
+    grid-template-columns: auto auto auto;
+  }
+
+  /* media footer component */
+  footer .inner div:nth-child(2) {
+    margin-left: 22px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .about{
+    display: grid;
+    height: 700px;
+  }
+  .about .img img{
+    width: 350px;
+    height: 250px;
+  }
+  .about .context{
+    width: 80%;
+    margin-top: -30px;
+  }
+  .about .context h1{
+    font-size: 27px;
+    margin: 10px 0;
+  }
+
+   /* media services component */
+   .service{
+    margin-top: 100px;
+  }
+  .service h1{
+    font-size: 27px;
+  }
+  .service .card-cont{
+    grid-template-columns: auto;
+  }
+
+  /* media pricing component */
+  .price h1{
+    font-size: 27px;
+  }
+  .price .price-cont{
+    display: grid;
+    grid-template-columns: auto;
+    gap: 30px;
+  }
+
+    /* media choice component */
+    .choice{
+      flex-direction: column;
+      height: 600px;
+      margin-top: 20px;
+    }
+    .choice img{
+      width: 350px;
+      height: 250px;
+      display: block;
+      margin: auto;
+    }
+    .choice .context{
+      width: 90%;
+      /* margin-top: 20px; */
+    }
+    .choice .context h1{
+      font-size: 24px;
+      margin: 10px 0;
+    }
+    .choice .context p{
+      margin-bottom: 20px;
+    }
+    .choice .reason{
+      grid-template-columns: auto auto;
+      gap: 20px;
+    }
+
+    /* media experience component */
+    .experience{
+      height: 500px;
+      margin-top: 100px;
+    }
+    .experience .inner{
+      display: grid;
+      place-items: center;
+      width: 80%;
+    }
+    .experience .inner h1{
+      font-size: 23px;
+    }
+    .experience .context{
+      display: grid;
+      place-items: center;
+      width: 80%;
+    }
+    .experience .context div{
+      margin-top: 20px;
+    }
+
+    /* media testimonial component */
+    .testimonial h1{
+      font-size: 27px;
+    }
+    .testimonial .slider{
+      width: 400px;
+    }
+
+    /* media blog component */
+  .blog {
+    display: grid;
+    grid-template-columns: auto;
+    column-gap: 40px;
+    height: 1350px;
+  }
+  .blog .card:nth-child(2){
+    margin-top: -40px;
+  }
+
+  /* media partners component */
+  .partner .card-cont{
+    margin-left: -75px;
+    grid-template-columns: auto auto;
+    gap: 30px;
+  }
+  .partner .card-cont .card{
+    width: 50px;
+  }
+
+   /* media footer component */
+   footer .inner {
+    display: grid;
+    width: 80%;
+    place-items: center;
+  }
+  footer .inner div{
+    width: 100%;
+    margin-top: 10px;
+  }
+  footer .inner div ul li{
+    margin-left: 20px;
+  }
+  footer .inner div:nth-child(2){
+    margin-left: 4px;
+  }
+  footer .inner div:nth-child(4) ul li{
+    margin-left: 2px;
+  }
+}
