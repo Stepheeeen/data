@@ -10,9 +10,6 @@ li{
   list-style: none;
 }
 
-.media-nav{
-  display: none;
-}
 
 /* Navbar component */
 .navbar {
@@ -27,6 +24,23 @@ li{
   color: #fff;
   background: transparent;
   z-index: 9;
+}
+.media-nav{
+  display: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.navbar .nav-btn{
+  padding: 5px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #000;
+  visibility: hidden;
+  opacity: 0;
 }
 .active{
   background-color: #fff;
@@ -509,6 +523,28 @@ footer .inner div span svg{
 @media screen and (max-width: 900px) {
   .navbar .nav-link{
     display: none;
+  }
+  .navbar .nav-btn{
+    visibility: visible;
+    opacity: 1;
+  }
+  .navbar nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: #fff;
+    transition: 1s;
+    transform: translateX(-100%);
+  }
+  .navbar .resp_nav{
+    transform: none;
   }
   .navbar .media-nav{
     display: block;
