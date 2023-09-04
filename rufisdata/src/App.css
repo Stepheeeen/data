@@ -24,8 +24,18 @@ li{
   position: fixed;
   top: 0;
   height: 40px;
+  color: #fff;
+  background: transparent;
+  z-index: 9;
+}
+.active{
+  background-color: #fff;
   color: #000;
-/* background: #d6d5d5; */
+  transition: .3s ease;
+  box-shadow: 0 0 3px 0 #808080;
+}
+.active a{
+  color: #000;
 }
 
 .navbar .nav-link ul{
@@ -36,10 +46,23 @@ li{
 }
 .navbar .nav-link ul li{
   margin-right: 10px;
+  color: #00579a;
 }
 .navbar .nav-link ul li a{
   font-size: 18px;
-  color: rgb(202, 198, 198);
+  transition: .3s ease;
+}
+.navbar .nav-link ul li a:hover{
+  padding: 10px;
+  background: rgb(51, 51, 51);
+  color: #cac7c7;
+  border-radius: 5px;
+}
+.media-nav svg{
+  fill: #fff;
+}
+.active .media-nav svg{
+  fill: #000;
 }
 
 /* hero component */
