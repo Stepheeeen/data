@@ -18,6 +18,10 @@ function App() {
   window.addEventListener('scroll', changeBg);
   
   const mediaNav = useRef();
+
+  const showNavbar = () => {
+    mediaNav.current.classList.toggle("resp_nav")
+  }
   return (
     <main>
       <div className={navbar ? 'navbar active' : 'navbar'}>
@@ -45,10 +49,12 @@ function App() {
           </li>
         </ul>
 
-        close
+        <button className='nav-btn close' onClick={showNavbar}>
+          X
+        </button>
       </nav>
 
-      <div className="media-nav">
+      <div className="media-nav" onClick={showNavbar}>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z" ></path></svg>
       </div>
 
